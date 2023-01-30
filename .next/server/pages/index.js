@@ -93,7 +93,7 @@ eval("// Exports\nmodule.exports = {\n\t\"link\": \"A_link__JgHCF\"\n};\n//# sou
   \********************************/
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"block\": \"user_block__3qhOf\",\n\t\"main_head\": \"user_main_head__vWL9U\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdHlsZS91c2VyLm1vZHVsZS5zY3NzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZXh0X2pzLy4vc3R5bGUvdXNlci5tb2R1bGUuc2Nzcz8yYzNjIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcImJsb2NrXCI6IFwidXNlcl9ibG9ja19fM3FoT2ZcIixcblx0XCJtYWluX2hlYWRcIjogXCJ1c2VyX21haW5faGVhZF9fdldMOVVcIlxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./style/user.module.scss\n");
+eval("// Exports\nmodule.exports = {\n\t\"block\": \"user_block__3qhOf\",\n\t\"main_head\": \"user_main_head__vWL9U\",\n\t\"text_info\": \"user_text_info___SpMb\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdHlsZS91c2VyLm1vZHVsZS5zY3NzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL25leHRfanMvLi9zdHlsZS91c2VyLm1vZHVsZS5zY3NzPzJjM2MiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiYmxvY2tcIjogXCJ1c2VyX2Jsb2NrX18zcWhPZlwiLFxuXHRcIm1haW5faGVhZFwiOiBcInVzZXJfbWFpbl9oZWFkX192V0w5VVwiLFxuXHRcInRleHRfaW5mb1wiOiBcInVzZXJfdGV4dF9pbmZvX19fU3BNYlwiXG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./style/user.module.scss\n");
 
 /***/ }),
 

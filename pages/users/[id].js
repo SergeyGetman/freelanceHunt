@@ -3,17 +3,26 @@ import style from "../../style/user.module.scss"
 import MainContainer from "../../components/MainContainer";
 
 export default function User ({user}) {
-    console.log('this is user', user)
+
     const router = useRouter()
     const {query} = router;
+    const  { address } = user;
+
     return (
         <MainContainer keywords={user.name}>
             <div className={style.block}>
                 <h1>
                     {`Пользователь number ${query.id}`}
                 </h1>
-                <div>
-                    {`Name User: ${user.name}`}
+                <div className={style.text_info}>
+                    {`Name User: ${user.name}`}<br/>
+                    {`Address: ${address.city}`}<br/>
+                    {`Street: ${address.street}`}
+                </div>
+
+                <div className={style.positions_geo}>
+                    {`PositionLAT: ${address.geo.lat}`}
+                    {`PositionLNG: ${address.geo.lng}`}
                 </div>
 
             </div>

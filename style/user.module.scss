@@ -1,6 +1,7 @@
 
 .block {
   background-color: #ca63eb;
+  height: 20vh;
 
    h1 {
       color: deepskyblue;
@@ -19,4 +20,12 @@
        background-color: yellow;
      }
    }
+}
+.text_info {
+  background-color: #c3c364;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+.positions_geo {
+
 }
