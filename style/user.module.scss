@@ -1,12 +1,12 @@
 
 .block {
   background-color: #ca63eb;
-  height: 20vh;
+  height: 100%;
 
-   h1 {
-      color: deepskyblue;
-      font-size: 5vh;
-    }
+  h1 {
+    color: deepskyblue;
+    font-size: 5vh;
+  }
 }
 
 .main_head {
@@ -15,17 +15,34 @@
   font-weight: bold;
   font-size: 10vh;
 
-   & {
-     images {
-       background-color: yellow;
-     }
-   }
+  & {
+    images {
+      background-color: yellow;
+    }
+  }
 }
+
 .text_info {
   background-color: #c3c364;
   font-weight: bold;
   word-wrap: break-word;
 }
-.positions_geo {
 
+.avatarList {
+  background-image: url("../pages/images/ava-1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  border: 3px solid #c5e614;
+  padding: 10px;
+}
+
+.avatarList:hover {
+  cursor: pointer;
+  background-color: #dcd7d7;
+}
+
+.avatarListBorder {
+  border: 2px solid green;
 }
