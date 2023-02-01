@@ -1,12 +1,13 @@
 import Link from "next/link";
 import MainContainer from "../components/MainContainer";
 import Images from "../components/Images";
+import {sizeData} from "../mock/state";
 
 const Users = ({users, photo}) => {
 
     return (
         <>
-            <MainContainer keywords={"page users"}>
+            <MainContainer keywords={sizeData.keywords.pageUser}>
                 <h1>All users</h1>
                 <ul>{users.map((el, idx) => {
                     return (

@@ -6,12 +6,14 @@ import {useState} from "react";
 
 export default function User({user}) {
 
+    const {name, addressUser, street, positionLAT, PositionLNG} = sizeData.infoUser;
+
     const [checkBorder, setCheckBorder] = useState(false)
     const router = useRouter()
     const {query} = router;
     const {address} = user;
 
-    const setChangeBorder = (e) => {
+    const setChangeBorder = () => {
         if (!checkBorder) {
             sizeData.height = sizeData.height.slice(+checkBorder, sizeData.height.length - 1)
             if (sizeData.height.length === 0) {
@@ -25,17 +27,17 @@ export default function User({user}) {
         <MainContainer keywords={user.name}>
             <div className={style.block}>
                 <h1>
-                    {`Пользователь number ${query.id}`}
+                    {`${sizeData.infoUser.numberUser} ${query.id}`}
                 </h1>
                 <div className={style.text_info}>
-                    {`Name User: ${user.name}`}<br/>
-                    {`Address: ${address.city}`}<br/>
-                    {`Street: ${address.street}`}
+                    {`${name}: ${user.name} \n`}
+                    {`${addressUser}: ${address.city} \n`}
+                    {`${street}: ${address.street}`}
                 </div>
 
                 <div className={style.positions_geo}>
-                    {`PositionLAT: ${address.geo.lat}`}
-                    {`PositionLNG: ${address.geo.lng}`}
+                    {`${positionLAT}: ${address.geo.lat}\n`}
+                    {`${PositionLNG}: ${address.geo.lng}`}
                 </div>
 
                 <div className={style.avatarListBorder}>
