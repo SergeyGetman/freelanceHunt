@@ -2,7 +2,7 @@ import {useRouter} from "next/router";
 import style from "../../style/user.module.scss"
 import MainContainer from "../../components/MainContainer";
 import {sizeData} from "../../mock/state";
-import {useState} from "react";
+import {useRef, useState} from "react";
 
 export default function User({user}) {
 
@@ -13,10 +13,14 @@ export default function User({user}) {
     const {query} = router;
     const {address} = user;
 
+    const myContainer = useRef(null);
+
+
     const setChangeBorder = () => {
+
         if (!checkBorder) {
-            sizeData.height = sizeData.height.slice(+checkBorder, sizeData.height.length - 1)
-            if (sizeData.height.length === 0) {
+            sizeData.height = sizeData.height.slice(0, sizeData.height.length)
+            if (sizeData.height.length === 0 || sizeData.height.length === 1) {
                 return sizeData.height[0]
             }
         }
@@ -43,12 +47,9 @@ export default function User({user}) {
                 <div className={style.avatarListBorder}>
                     {sizeData.height.map((el, idx) => {
                         return (
-                            checkBorder ? <div key={idx} onClick={setChangeBorder} className={style.avatarList}
+                            !checkBorder ? <div key={idx} onClick={setChangeBorder} className={style.avatarList}
                                                style={{height: `${sizeData.height[idx]}`}}/>
-                                : <div onClick={setChangeBorder} className={style.avatarList}
-                                       style={{
-                                           height: `${sizeData.height[idx]}`, border: "3px solid red"
-                                       }}/>
+                                : <div ref={myContainer} className={style.avatarListDisabled} style={{height: `${sizeData.height[idx]}`}} />
                         )
                     })
                     }

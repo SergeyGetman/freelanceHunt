@@ -17,7 +17,7 @@ const MainContainer = ({children, keywords}) => {
             <div>
                 {children}
             </div>
-        </div>
+        </div> 
     );
 };
 
