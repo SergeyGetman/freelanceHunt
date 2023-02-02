@@ -15,7 +15,6 @@ export default function User({user}) {
 
     const myContainer = useRef(null);
 
-
     const setChangeBorder = () => {
 
         if (!checkBorder) {
