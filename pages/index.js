@@ -6,7 +6,7 @@ const Index = () => {
     return (
         <>
             <MainContainer keywords={sizeData.keywords.mainPage}>
-                <div  className={styles.main_head}>
+                <div className={styles.main_head}>
                     <h1>{sizeData.keywords.mainPage}</h1>
                 </div>
             </MainContainer>

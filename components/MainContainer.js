@@ -1,5 +1,5 @@
 import cl from "../pages/style.module.css";
-import A from "./A";
+import ALinkRef from "./ALinkRef";
 import Head from "next/head";
 
 
@@ -11,8 +11,8 @@ const MainContainer = ({children, keywords}) => {
                 <title>Main PAGE</title>
             </Head>
             <div className={cl.navbar}>
-                <A href={"/"} text="Главная">Main</A>
-                <A href={"/users"} text="Пользователи">Users</A>
+                <ALinkRef href={"/"} text="Главная">Main</ALinkRef>
+                <ALinkRef href={"/users"} text="Пользователи">Users</ALinkRef>
             </div>
             <div>
                 {children}
