@@ -14,8 +14,6 @@ const Store = ({ListOfProducts}) => {
         return strStar
     }
 
-
-
     return (
         <MainContainer children={ListOfProducts}>
             <div className={styles.title}> S.T.O.R.E </div>

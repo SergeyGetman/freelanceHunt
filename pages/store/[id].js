@@ -1,7 +1,6 @@
 import React from 'react';
 import {useRouter} from "next/router";
 import MainContainer from "../../components/MainContainer";
-import {sizeData} from "../../mock/state";
 import style from "../../style/user.module.scss"
 
 const CurrentStorePurchase = ({prod}) => {
@@ -11,7 +10,7 @@ const CurrentStorePurchase = ({prod}) => {
 
     return (
         <MainContainer>
-            <div>
+            <div className={style.storeBlock}>
                 <h2>
                     {`Article: ARTX${query?.id}`}
                 </h2>
