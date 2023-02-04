@@ -18,7 +18,7 @@ const Store = ({ListOfProducts}) => {
             <div className={styles.title}> S.T.O.R.E </div>
 
             <div className={styles.wrapper}>
-                {ListOfProducts.map((el, idx) => {
+                {ListOfProducts?.map((el, idx) => {
                     return (
                         <div className={styles.listItem}>
 
