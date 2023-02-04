@@ -1,6 +1,7 @@
 .navbar {
-    background-color: #d9d10f;
+    background-color: #6f6f69;
     padding: 10px;
+    text-decoration: none;
 }
 
 .link {
@@ -17,9 +18,11 @@
 }
 
 .title {
+    background-color: #191616;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    color: white;
 
 }
 
@@ -30,12 +33,18 @@
     text-align: center;
 }
 
+
 .listItem img {
     height: 150px;
     width: 200px;
     border: 2px solid darkred;
     border-radius: 20px;
 }
+
+.listItem img:hover{
+    opacity: .5;
+}
+
 .price {
     font-weight: bold;
     font-size: 1rem;

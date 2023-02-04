@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import styles from "./style.module.css"
+import {useRouter} from "next/router";
+import MainContainer from "../components/MainContainer";
+import Link from "next/link";
 
 const Store = ({ListOfProducts}) => {
 
@@ -14,13 +17,15 @@ const Store = ({ListOfProducts}) => {
 
 
     return (
-        <div>
+        <MainContainer children={ListOfProducts}>
             <div className={styles.title}> S.T.O.R.E </div>
 
             <div className={styles.wrapper}>
                 {ListOfProducts?.map((el, idx) => {
                     return (
-                        <div className={styles.listItem}>
+                        <div key={idx} className={styles.listItem}>
+                            <Link href={`/store/${idx + 1}`}>
+
 
                             <img src={el.image} alt=""/>
                             <div className={styles.price}>
@@ -34,6 +39,7 @@ const Store = ({ListOfProducts}) => {
                             <div>
                                 {el.price}
                             </div>
+                            </Link>
                             <button type="button">BUY NOW</button>
                         </div>
 
@@ -41,13 +47,13 @@ const Store = ({ListOfProducts}) => {
                 })}
 
             </div>
-        </div>
+        </MainContainer>
     );
 };
 
 export default Store;
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
     const ListOfProducts = await fetch('https://fakestoreapi.com/products').then(r => r.json())
 
     return {
