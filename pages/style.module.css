@@ -2,10 +2,6 @@
     background-color: #d9d10f;
     padding: 10px;
 }
-.main_page {
-    z-index: 0;
-
-}
 
 .link {
     text-decoration: none;
@@ -18,4 +14,37 @@
     font-size: 10vh;
     margin-top: 15%;
     background-color: #df1147;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.listItem {
+    background-color: #909085;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.listItem img {
+    height: 150px;
+    width: 200px;
+    border: 2px solid darkred;
+    border-radius: 20px;
+}
+.price {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.rating{
+    color: #e3f20b;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }

@@ -13,6 +13,7 @@ const MainContainer = ({children, keywords}) => {
             <div className={cl.navbar}>
                 <ALinkRef href={"/"} text="Главная">Main</ALinkRef>
                 <ALinkRef href={"/users"} text="Пользователи">Users</ALinkRef>
+                <ALinkRef href={"/store"} text="Store">Store</ALinkRef>
             </div>
             <div>
                 {children}

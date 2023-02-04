@@ -2,8 +2,10 @@ import Link from "next/link";
 import MainContainer from "../components/MainContainer";
 import Images from "../components/Images";
 import {sizeData} from "../mock/state";
+import Store from "./store";
 
-const Users = ({users, photo}) => {
+const Users = ({users, photo }) => {
+
 
     return (
         <>
@@ -20,7 +22,7 @@ const Users = ({users, photo}) => {
                         </li>
                     )
                 })}</ul>
-
+                <Store />
             </MainContainer>
         </>
 
@@ -36,6 +38,6 @@ export async function getStaticProps(context) {
     const photo = await responsePhoto.json();
 
     return {
-        props: {users, photo}, // will be passed to the page component as props
+        props: {users, photo }, // will be passed to the page component as props
     }
 }
