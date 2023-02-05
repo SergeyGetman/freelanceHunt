@@ -6,13 +6,6 @@
     min-width: 100%;
 }
 
-
-.foto {
-    background-color: #bc2b2b;
-    height: 50px;
-    width: 50px;
-}
-
 @media screen and (min-width: 375px) {
     .navbar {
         width: 900px;

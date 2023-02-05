@@ -29,12 +29,15 @@ const CurrentStorePurchase = ({prod}) => {
                         {`Article: ARTX${query?.id}`}
                     </h2>
 
-                    <div>
+                    <div >
+                        <div className={style.textStoreItem}>
+                            Change your color
+                        </div>
+
                         {BGColor.map((el, idx) => {
                             return (
                                 <div key={idx} onClick={changeColor(el)} style={{backgroundColor: `${el}`}} className={
                                     active === el ? style.colorPosizition__active : style.colorPosizition}>
-                                    1
                                 </div>
                             )
                         })}

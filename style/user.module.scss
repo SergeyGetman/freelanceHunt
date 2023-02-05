@@ -72,8 +72,8 @@
   text-align: center;
   height: 25px;
   width: 25px;
-  border: 3px solid #e3d5d5;
   background-color: white;
+  cursor: pointer;
 }
 
 .colorPosizition__active{
@@ -82,7 +82,7 @@
   text-align: center;
   height: 25px;
   width: 25px;
-  border: 3px solid #d21c1c;
+  border: 3px solid #fbf9f9;
   background-color: #f5f1f4;
 }
 
@@ -93,6 +93,15 @@
   height: 500px;
   margin-left: 35%;
   border-radius: 20px;
+}
+
+.textStoreItem{
+  text-align: center;
+  background-color: #0a0a0a;
+  color: white;
+  width: 200px;
+  border-radius: 10px;
+
 }
 
 .listStoreItem {
