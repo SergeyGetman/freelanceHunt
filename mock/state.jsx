@@ -11,5 +11,6 @@ export const sizeData = {
         street: "Street",
         positionLAT: "PositionLAT",
         PositionLNG: "PositionLNG"
-    }
+    },
+    bgColorLayoutPosition: ["green", "red", "blue"]
 }
