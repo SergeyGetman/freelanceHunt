@@ -1,10 +1,10 @@
 import Link from "next/link";
 import style from "../style/A.module.css"
 
-export default  function ALinkRef({text, href}) {
+export default  function ALinkRef({text, href, handleClick}) {
     return (
         <Link href={href}>
-            <h2 className={style.link}>{text}</h2>
+            <h2 onClick={handleClick} className={style.link}>{text}</h2>
         </Link>
     )
 }

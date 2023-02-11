@@ -5,7 +5,7 @@ export const Spiner = () => {
 
     useEffect(() => {
         document.body.style.background = 'azure'
-    })
+    },[])
 
     return (
         <>
