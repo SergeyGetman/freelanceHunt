@@ -1,13 +1,40 @@
 import cl from "../pages/style.module.css";
 import ALinkRef from "./ALinkRef";
 import Head from "next/head";
+import {useState} from "react";
+import {Spiner} from "./Spiner";
 
 
 const MainContainer = ({children, keywords}) => {
+    const [isLoading, setIsLoading] = useState(false);
+    console.log('this is isLoading', isLoading)
+    const [users, setUsers] = useState({})
+    console.log('this is users', users)
+    const handleFetch = () => {
+        if (users.length < 1) {
+            return <Spiner/>
+        }
+        setIsLoading(true);
+        fetch("https://reqres.in/api/users?page=0")
+            .then(response => response.json())
+            .then((response) => {
+                setUsers(response.data)
+            })
+            .catch(() => {
+                    console.error("SErver error");
+                    setIsLoading(false);
+                }
+            )
+        setIsLoading(false)
+
+    };
+
+
+
     return (
-        <div>
+        <div className={cl.head}>
             <Head>
-                <meta keywords={'this test next_js ' + keywords}/>
+                <meta keywords={'next_js ' + keywords}/>
                 <title>Main PAGE</title>
             </Head>
             <div className={cl.navbar}>
@@ -18,7 +45,11 @@ const MainContainer = ({children, keywords}) => {
             <div>
                 {children}
             </div>
-        </div> 
+            {!isLoading ? <Spiner /> : ""}
+            <button onClick={handleFetch} disabled={isLoading}>Fetch Users</button>
+
+        </div>
+
     );
 };
 

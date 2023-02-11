@@ -1,9 +1,17 @@
 
 .navbar {
+    display: flex;
     background-color: #6f6f69;
     padding: 10px;
     text-decoration: none;
     min-width: 100%;
+}
+
+.head {
+
+}
+.head a {
+    text-decoration: none;
 }
 
 @media screen and (min-width: 375px) {

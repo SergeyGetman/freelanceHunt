@@ -123,3 +123,34 @@
   color: white;
   padding: 20px;
 }
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading__spinner {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border: 10px solid #3da70d; /* Light grey */
+  border-top: 10px solid #bf0b64; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.serverError {
+  height: 200px;
+  font-size: 5rem;
+  color: black;
+  background-color: #796f6f;
+
+
+  &__text {
+    background-color: #00DDEB;
+    color: #7e8780;
+  }
+}
