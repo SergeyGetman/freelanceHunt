@@ -2,11 +2,9 @@ import Link from "next/link";
 import MainContainer from "../components/MainContainer";
 import Images from "../components/Images";
 import {sizeData} from "../mock/state";
-import Store from "./store";
-import {Spiner} from "../components/Spiner";
+import {objAPI} from "../api/api";
 
-const Users = ({users, photo}) => {
-
+const Users = ({users, photo }) => {
 
     return (
         <>
@@ -23,7 +21,6 @@ const Users = ({users, photo}) => {
                         </li>
                     )
                 })}</ul>
-                <Store/>
             </MainContainer>
         </>
 
@@ -33,12 +30,14 @@ const Users = ({users, photo}) => {
 export default Users;
 
 export async function getStaticProps(context) {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    const users = await response.json()
-    const responsePhoto = await fetch("https://jsonplaceholder.typicode.com/photos")
-    const photo = await responsePhoto.json();
 
-    return {
-        props: {users, photo}, // will be passed to the page component as props
-    }
+  return await objAPI.getListData().then(arrayData => {
+        return {
+            props: {
+                users: arrayData[0],
+                photo: arrayData[1]
+            }
+        }
+    })
 }
+

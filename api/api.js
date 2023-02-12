@@ -21,9 +21,19 @@ const getStaticProps = () => {
         })
 }
 
+const getStaticList = () => {
+    const users =  fetch('https://jsonplaceholder.typicode.com/users').then(r => r.json());
+    const photo =  fetch("https://jsonplaceholder.typicode.com/photos").then(r => r.json());
+
+    return Promise.all([users, photo]).then(values => {
+        return values;
+    })
+}
+
 export const objAPI = {
     requestGETTUsers: handleFetch,
-    getProducts: getStaticProps
+    getProducts: getStaticProps,
+    getListData: getStaticList
 }
 
 
