@@ -1,9 +1,12 @@
 import cl from "../pages/style.module.css";
 import ALinkRef from "./ALinkRef";
 import Head from "next/head";
+import {sizeData} from "../mock/state";
 
 
 const MainContainer = ({children, keywords }) => {
+
+    const [main, users, store, managers] = sizeData.mainPageNames
 
     return (
         <div className={cl.head}>
@@ -12,15 +15,14 @@ const MainContainer = ({children, keywords }) => {
                 <title>Main PAGE</title>
             </Head>
             <div className={cl.navbar}>
-                <ALinkRef href={"/"} text="Главная">Main</ALinkRef>
-                <ALinkRef href={"/users"} text="Пользователи">Users</ALinkRef>
-                <ALinkRef href={"/store"} text="Store">Store</ALinkRef>
-                <ALinkRef href={"/listmanagers"} text="listmanagers">list managers</ALinkRef>
+                <ALinkRef href={"/"} text={main.main} />
+                <ALinkRef href={"/users"} text={users.users} />
+                <ALinkRef href={"/store"} text={store.store} />
+                <ALinkRef href={"/listmanagers"} text={managers.managers} />
             </div>
             <div>
                 {children}
             </div>
-
 
         </div>
 

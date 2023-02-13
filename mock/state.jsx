@@ -12,5 +12,11 @@ export const sizeData = {
         positionLAT: "PositionLAT",
         PositionLNG: "PositionLNG"
     },
-    bgColorLayoutPosition: ["green", "red", "blue"]
+    bgColorLayoutPosition: ["green", "red", "blue"],
+    mainPageNames: [
+        {  main: "Main"},
+        {  users: "Users"},
+        {  store: "Store"},
+        {  managers: "Managers"},
+    ]
 }
