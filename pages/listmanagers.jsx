@@ -3,6 +3,7 @@ import MainContainer from "../components/MainContainer";
 import {Spiner} from "../components/Spiner";
 import Link from "next/link";
 import {objAPI} from "../api/api";
+import {MainBgHeader} from "../components/MainBGHeader";
 
 const Listmanagers = () => {
     const [isLoading, setIsLoading] = useState(Boolean);
@@ -30,6 +31,8 @@ const Listmanagers = () => {
                 )
             })}
             <button onClick={handleClick} disabled={isLoading}>Fetch Users</button>
+
+            <MainBgHeader />
         </MainContainer>
     );
 };
