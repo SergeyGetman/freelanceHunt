@@ -13,10 +13,7 @@ export const Spiner = () => {
                 <div className={styles.loading__spinner}>
                 </div>
             </div>
-            <div className={styles.serverError}>
-                SERVER ERROR
                 <div className={styles.serverError__text}>...</div>
-            </div>
         </>
 
     );

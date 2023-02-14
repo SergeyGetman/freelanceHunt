@@ -6,14 +6,19 @@ import {objAPI} from "../api/api";
 import {Spiner} from "../components/Spiner";
 
 
-const Store = ({ListOfProducts}) => {
+const Store = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [listOfProducts, setListOfProducts] = useState([])
 
-    objAPI.getProducts().then(users => {
-        setListOfProducts(users)
-        setIsLoading(false)
-    })
+    useEffect(() => {
+        objAPI.getProducts().then(users => {
+            setListOfProducts(users)
+            setIsLoading(false)
+        })
+    }, [])
+
+
+    console.log("this is page")
 
 
     const renderRate = (number) => {
@@ -25,7 +30,7 @@ const Store = ({ListOfProducts}) => {
     }
 
     return (
-        <MainContainer children={ListOfProducts}>
+        <MainContainer>
             <div className={styles.title}> S.T.O.R.E </div>
             {isLoading ? <Spiner /> :
                 <div className={styles.wrapper}>
