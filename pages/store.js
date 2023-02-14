@@ -18,9 +18,6 @@ const Store = () => {
     }, [])
 
 
-    console.log("this is page")
-
-
     const renderRate = (number) => {
         let strStar = "";
         for(let i = 1; i <= 5; i++){
