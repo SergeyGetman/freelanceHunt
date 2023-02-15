@@ -3,10 +3,6 @@ import styles from "../style/user.module.scss"
 
 export const Spiner = () => {
 
-    useEffect(() => {
-        document.body.style.background = 'azure'
-    },[])
-
     return (
         <>
             <div>

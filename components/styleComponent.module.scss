@@ -1,14 +1,78 @@
-.header{
-  height: 100px;
+.header {
   background: #b72828;
 }
 
-.headerIMG {
-  background-image: url("../pages/images/generalPage/Rectangle 29.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 650px;
+.general__block {
+  background-color: #00DDEB;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   width: 1170px;
+
+  &_BTN {
+    position: relative;
+
+    button {
+      margin-left: auto;
+      right: 0;
+      position: absolute;
+      background-image: linear-gradient(144deg, #AF40FF, #bf9b17 50%, #c0bc1c);
+    }
+  }
+
+  &__headerIMG {
+    position: absolute;
+
+    &__AllText{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+      width: 18em
+    }
+    background-image: url("../pages/images/generalPage/Rectangle 29.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 650px;
+    width: 1170px;
+
+
+    &_textHEADER {
+
+      width: 380px;
+      height: 80px;
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 45px;
+      line-height: 40px;
+      color: #FFFFFF;
+
+    }
+
+    &_textLogan {
+      width: 380px;
+      height: 156px;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+      color: #FFFFFF;
+      order: 1;
+      flex-grow: 0;
+    }
+  }
+
+
 }
+
+.textStyleSheet {
+  text-align: center;
+  font-weight: bold;
+  font-size: 5rem;
+  font-family: "Arial Rounded MT Bold, Arial";
+}
+
 

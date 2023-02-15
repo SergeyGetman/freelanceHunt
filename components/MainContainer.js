@@ -3,7 +3,6 @@ import ALinkRef from "./ALinkRef";
 import Head from "next/head";
 import {sizeData} from "../mock/state";
 
-
 const MainContainer = ({children, keywords }) => {
 
     const [main, users, store, managers] = sizeData.mainPageNames
@@ -23,7 +22,6 @@ const MainContainer = ({children, keywords }) => {
             <div>
                 {children}
             </div>
-
         </div>
 
     );
