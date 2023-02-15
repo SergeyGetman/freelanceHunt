@@ -10,14 +10,24 @@
   width: 1170px;
 
   &_BTN {
-    position: relative;
+    position: absolute;
+    margin-left: auto;
+    margin-top: -5px;
+    right: 30px;
+
+    &__SignUp{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      width: 2rem;
+    }
 
     button {
       margin-left: auto;
-      right: 0;
-      position: absolute;
+      right: 20px;
       background-image: linear-gradient(144deg, #AF40FF, #bf9b17 50%, #c0bc1c);
     }
+
   }
 
   &__headerIMG {
@@ -26,14 +36,14 @@
     &__AllText{
       margin-left: auto;
       margin-right: auto;
-      margin-top: 10%;
+      margin-top: 13%;
       width: 18em
     }
     background-image: url("../pages/images/generalPage/Rectangle 29.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 650px;
+    height: 750px;
     width: 1170px;
 
 
@@ -46,8 +56,8 @@
       font-weight: 400;
       font-size: 45px;
       line-height: 40px;
+      margin: 20px;
       color: #FFFFFF;
-
     }
 
     &_textLogan {
