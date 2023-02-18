@@ -3,8 +3,11 @@ import MainContainer from "../components/MainContainer";
 import Images from "../components/Images";
 import {sizeData} from "../mock/state";
 import {objAPI} from "../api/api";
+import {useEffect} from "react";
 
 const Users = ({users, photo }) => {
+
+
 
     return (
         <>

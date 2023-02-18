@@ -9,6 +9,9 @@ import {Spiner} from "../components/Spiner";
 const Store = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [listOfProducts, setListOfProducts] = useState([])
+    const [usersCircle, setUsersCircle] = useState("")
+
+
 
     useEffect(() => {
         objAPI.getProducts().then(users => {
@@ -16,6 +19,8 @@ const Store = () => {
             setIsLoading(false)
         })
     }, [])
+
+
 
 
     const renderRate = (number) => {
