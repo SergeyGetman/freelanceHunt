@@ -2,8 +2,8 @@ import React from 'react';
 
 const UserCircle = () => {
     return (
-        <div className={styles}>
-
+        <div>
+            <h1>{1}</h1>
         </div>
     );
 };

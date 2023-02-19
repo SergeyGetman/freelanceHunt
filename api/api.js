@@ -1,4 +1,3 @@
-import {response} from "express";
 
 const handleFetch = () => {
     return fetch("https://reqres.in/api/users?page=0")
@@ -35,7 +34,10 @@ const getStaticList = () => {
 const getUsersCircleComponent = () => {
     return  fetch('https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=5')
         .then(response => {
-            console.log("response users", response)
+            return response.json();
+        })
+        .catch(err => {
+            alert(err)
         })
 }
 
@@ -43,7 +45,7 @@ export const objAPI = {
     requestGETTUsers: handleFetch,
     getProducts: getStaticProps,
     getListData: getStaticList,
-    getUsersCircle: getUsersCircleComponent
+    getCircle: getUsersCircleComponent
 }
 
 

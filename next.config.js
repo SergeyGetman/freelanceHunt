@@ -10,6 +10,7 @@ const nextConfig = {
                 "fs": false,
                 "path": false,
                 "os": false,
+                "async_hooks": false
             }
         }
         return config

@@ -8,12 +8,18 @@ import {useEffect} from "react";
 const Users = ({users, photo }) => {
 
 
+    useEffect(() => {
+        objAPI.getCircle().then(res => {
+            console.log("this is res DATA", res)
+        })
+    },[])
+
 
     return (
         <>
             <MainContainer keywords={sizeData.keywords.pageUser}>
                 <h1>All users</h1>
-                <ul>{users.map((el, idx) => {
+                <ul>{users?.map((el, idx) => {
                     return (
                         <li key={idx}>
                             <Link href={`/users/${idx + 1} `}>
@@ -25,6 +31,7 @@ const Users = ({users, photo }) => {
                     )
                 })}</ul>
             </MainContainer>
+            <h1>QWEQWEQWE</h1>
         </>
 
     );
@@ -34,7 +41,9 @@ export default Users;
 
 export async function getStaticProps(context) {
 
-  return await objAPI.getListData().then(arrayData => {
+    console.log('this is context', context)
+
+  return await objAPI.getListData()?.then(arrayData => {
         return {
             props: {
                 users: arrayData[0],
@@ -43,4 +52,6 @@ export async function getStaticProps(context) {
         }
     })
 }
+
+
 
