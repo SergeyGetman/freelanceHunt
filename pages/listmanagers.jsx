@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import MainContainer from "../components/MainContainer";
 import {Spiner} from "../components/Spiner";
 import Link from "next/link";
@@ -17,6 +17,9 @@ const Listmanagers = () => {
         })
     }
 
+
+
+
     return (
         <MainContainer>
             <h1>List Managers</h1>
@@ -33,6 +36,7 @@ const Listmanagers = () => {
             <button onClick={handleClick} disabled={isLoading}>Fetch Users</button>
 
             <MainBgHeader />
+
         </MainContainer>
     );
 };

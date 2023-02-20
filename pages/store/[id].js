@@ -6,6 +6,7 @@ import {Context} from "../../context/Context";
 import {sizeData} from "../../mock/state";
 
 const CurrentStorePurchase = ({prod}) => {
+    console.log("this is prod", prod)
 
     const [active, setActive] = useState("")
 
@@ -71,6 +72,7 @@ const CurrentStorePurchase = ({prod}) => {
 export default CurrentStorePurchase;
 
 export async function getServerSideProps({params}) {
+    console.log('this is params', params)
     const response = await fetch(`https://fakestoreapi.com/products/${params.id}`)
     const prod = await response.json()
 

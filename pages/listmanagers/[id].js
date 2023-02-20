@@ -1,10 +1,22 @@
 import {useRouter} from "next/router";
 import MainContainer from "../../components/MainContainer";
 import styles from "../../components/styleComponent.module.scss";
+import UserCircle from "../../components/UserCircle";
+import React, {useEffect, useState} from "react";
+import {objAPI} from "../../api/api";
 
 
 
  function HeaderImage () {
+
+     const [usersForCircle, setUsersForCircle] = useState([])
+     console.log("this is usersForCircle", usersForCircle)
+
+     useEffect(() => {
+         objAPI.getCircle().then(res => {
+             setUsersForCircle(res.users)
+         })
+     },[])
 
     const router = useRouter()
     const {query} = router
@@ -32,6 +44,23 @@ import styles from "../../components/styleComponent.module.scss";
                         <button>SIGN IN</button>
                     </div>
 
+                </div>
+
+                <div className={styles.general__block__users}>
+                    {usersForCircle?.map((el, idx) => {
+                        return (
+                            <div key={idx}>
+                                <UserCircle
+                                image={el.photo}
+                                name={el.name}
+                                position={el.position}
+                                email={el.email}
+                                number={el?.phone}
+                            />
+                            </div>
+
+                        )
+                    })}
                 </div>
 
 

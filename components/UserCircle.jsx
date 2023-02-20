@@ -1,9 +1,16 @@
 import React from 'react';
 
-const UserCircle = () => {
+const UserCircle = ({image, name, position, email, number}) => {
+
     return (
         <div>
-            <h1>{1}</h1>
+            <div>
+                <img src={image} alt="logo"/>
+                <div>{name}</div>
+                <div>{position}</div>
+                <div>{email}</div>
+                <div>{number}</div>
+            </div>
         </div>
     );
 };

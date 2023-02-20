@@ -41,8 +41,6 @@ export default Users;
 
 export async function getStaticProps(context) {
 
-    console.log('this is context', context)
-
   return await objAPI.getListData()?.then(arrayData => {
         return {
             props: {

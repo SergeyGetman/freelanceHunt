@@ -66,6 +66,6 @@ export async function getServerSideProps({params}) {
     const user = await response.json()
 
     return {
-        props: {user}, // will be passed to the page component as props
+        props: {user}
     }
 }
