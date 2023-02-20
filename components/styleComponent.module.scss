@@ -3,11 +3,29 @@
 }
 
 .general__block {
-  background-color: #00DDEB;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 1170px;
+
+  &__firstBlock{
+    height: 800px;
+  }
+
+  &__secondBlock{
+
+    height: 750px;
+  }
+
+  &__titleGetRequest{
+    width: 1183px;
+    height: 120px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
 
   &_BTN {
     position: absolute;
@@ -51,7 +69,6 @@
 
       width: 380px;
       height: 80px;
-      font-family: 'Nunito';
       font-style: normal;
       font-weight: 400;
       font-size: 45px;
@@ -77,10 +94,37 @@
   
   
   &__users {
-    position: absolute;
-    background: #c31919;
-  }
+    position: relative;
+    width: 100%;
+    min-height: 575px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
 
+    &__user{
+      text-align: center;
+      padding: 20px;
+      height: 255px;
+      border: 20px solid #f8f8f8;
+      float: left;
+      width: calc(33.333333% - 20px);
+      margin: 0 10px 20px 10px;
+      font-style: normal;
+      font-weight: 550;
+      font-size: 16px;
+      line-height: 26px;
+      color: rgba(0, 0, 0, 0.87);
+
+      img{
+        border-radius: 50%;
+      }
+    }
+    
+    &__btn{
+      text-align: center;
+    }
+  }
 
 }
 
@@ -88,7 +132,7 @@
   text-align: center;
   font-weight: bold;
   font-size: 5rem;
-  font-family: "Arial Rounded MT Bold, Arial", Calibri;
+  font-family: "Arial Rounded MT Bold, Arial", cursive;
 }
 
 
